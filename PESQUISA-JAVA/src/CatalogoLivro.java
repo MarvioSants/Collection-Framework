@@ -40,5 +40,31 @@ public class CatalogoLivro {
         return livrosPorIntervaloAnos;
 
     }
+    public Livro PesquisaPorTitulo(String titulo){
+        Livro LivroPorTitulo = null;
+        if (!LivroList.isEmpty()) {
+            for( Livro l : LivroList){
+                if (l.getTitulo().equalsIgnoreCase(titulo)){
+                    LivroPorTitulo = l;
+                    break;
+                }
+            }
+        }
+        return LivroPorTitulo;
+    }
+
+    public static void main(String[] args) {
+       CatalogoLivro catalogo = new CatalogoLivro();
+       catalogo.AdicionarLivro("Java para iniciantes", "Herbert Schildt", 2015);
+       catalogo.AdicionarLivro("Java para iniciantes", "Herbert Stovisk", 2016);
+       catalogo.AdicionarLivro("Programação Orientada a Objeto", "Autor Desconhecido", 2010);
+       catalogo.AdicionarLivro("Curso em Livro", "Guanabara", 2020);
+       catalogo.AdicionarLivro("Vida Util", "Aleatório", 2024);
+
+
+       //System.out.println(catalogo.PesquisarAutor("Aleatório"));
+       //System.out.println(catalogo.PesquisaPorIntervalosAnos(2009, 2024));
+       System.out.println(catalogo.PesquisaPorTitulo("Java para iniciantes"));
+    }
     
 }

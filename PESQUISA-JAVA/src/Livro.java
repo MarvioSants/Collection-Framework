@@ -30,8 +30,5 @@ public class Livro {
         ", 'Autor = " +autor+ '\'' +
         ", Ano de Publicacao = "+anoPublicacao +'}';
     }
-    public static void main(String[] args) {
-        Livro livro = new Livro("Java para iniciantes", "Herbert Schildt", 2015);
-        System.out.println(livro.toString());
-    }
+   
 }
