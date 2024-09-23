@@ -17,7 +17,7 @@ public class Livro {
     public String getTitulo(){
         return titulo;
     }
-    public String getAutot(){
+    public String getAutor(){
         return autor;
     }
     public int getAnoPublicacao(){
